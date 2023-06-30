@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppings", sans-serif;
+  /* color: #fff; */
+}
+
+body{
+  background: white;
+  font-size: 14px;
+  display: flex;
+}
+
+.container{
+  width: 100%;
+  max-width: 75vw;
+  margin: auto;
+}
+
+.contact-box{
+  background: #c1bfc9;
+  display: flex;
+}
+
+.contact-left{
+  flex-basis: 60%;
+  padding: 40px 60px;
+}
+
+.contact-right{
+  flex-basis: 60%;
+  padding: 40px;
+  background: #1c00b5;
+  color: #fff;
+}
+
+h1{
+  margin-bottom: 10px;
+}
+
+.container p{
+  margin: bottom 10px;
+}
+
+.input-row{
+  display: flex;
+  /* justify-content: space-between;
+  margin-bottom: 20px; */
+  gap: 20px;
+  padding: 10px;
+}
+
+.input-row .input-group{
+  flex-basis: 45%;
+}
+
+input, select{
+  width: 100%;
+  border: none;
+  border-bottom: 3px solid #ccc;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+textarea{
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box ;
+}
+
+label{
+  margin-bottom: 6px;
+  display: block;
+  color: #1c00b5;
+}
+
+/* .container-b {
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  position: absolute;
+} */
+
+.upload-box{
+  font-size: 10px;
+  background: white;
+  border-radius:20px;
+  /* box-shadow: 1px 2px 5px black; */
+  width: 28vh;
+  outline: none;
+  margin-top: 5px;
+}
+
+::-webkit-file-upload-button{
+  color: white;
+  background:#6e77ee;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  /* box-shadow: 1px 0 1px 1px #6b4559; */
+}
+
+::-webkit-file-upload-button:hover{
+  background: #6e77ee;
+}
+
+button{
+  background: #1c00b5;
+  width: 100px;
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 40px;
+  border-radius: 30px;
+  margin-top: 20px;
+  box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, .3);
+}
+
+.contact-left h3{
+  color: #1c00b5;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.contact-right h3{
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Styling Recent Message */
+.messageContainer{
+  display: flex;
+  flex-direction: column;
+  color: black;
+  gap: 0.25em;
+}
+.messageCard{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  gap: 0.25em;
+}
+
+.message{
+  color: black;
+}

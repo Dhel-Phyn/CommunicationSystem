@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppings", sans-serif;
+}
+body{
+    background: #fff;
+    display: flex;
+}
+
+.cardBox {
+    position: relative;
+    width: 100vh;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    background: whitesmoke;
+  }
+  
+  .cardBox .card {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgb(0, 0, 0, 0.08);
+  }
+  
+  .cardBox .card .name {
+    position: relative;
+    font-weight: 5vh;
+    font-size: 2.5rem;
+    color:#6e77ee;
+  }
+  
+  .cardBox .card .cardname {
+    color: rgb(63, 19, 3);
+    font-size: 1.1rem;
+    margin-top: 5px;
+  }
+  
+  .cardBox .card .iconBx {
+    font-size: 3.5rem;
+    color: black;
+  }
+  
+  .cardBox .card:hover {
+    background: #507cdb 31% 14%;
+  }
+
+  
+  .dailyActive {
+    position: relative;
+    /* display: block; */
+    /* width: 40%; */
+    min-height: 20px;
+    padding: 10px;
+    margin-left: 10vh;
+    color: blue;
+    box-shadow: 0 7px 25px #494380;
+    border-radius: 20px;
+    justify-content: space-between;
+  }
+
+  .dailyActive h2{
+    color: blue;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 20px;
+    /* padding-left: 15px; */
+    margin-bottom: 25px;
+  }
+
+  input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 16px;
+  }
+
+  button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: blue;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  ul:not(nav > ul) li{
+    list-style-type: none;
+    font-size: 17px;
+    /* padding: 12px 8px 12px 50px; */
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  ul:not(nav > ul) li ::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('assets/img/uncheck.jpg');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+  }
+
+  ul:not(nav > ul) li.checked{
+    color: blue;
+    text-decoration: line-through;
+  }
+  ul:not(nav > ul) li.checked::before{
+    background-image: url('');
+  }
+  
+  ul:not(nav > ul) li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  ul:not(nav > ul) li span:hover{
+    color: red;
+  }
+  
