@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('chatId');
             $table->integer('senderId');
             $table->integer('recipientId');
+            $table->integer('phone');
+            $table->email('email');
             $table->text('text');
             $table->timestamps();
         });

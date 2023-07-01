@@ -64,11 +64,11 @@
                 </div>
                 <div class="input-group">
                   <label>Phone</label>
-                  <input type="text" placeholder="+233">
+                  <input type="text" name="phone" placeholder="+233">
                 </div>
                 <div class="input-group">
                   <label>Email</label>
-                  <input type="email" placeholder="gmail.com">
+                  <input type="email" name="email" placeholder="gmail.com">
                 </div>
               </div>
 
@@ -83,6 +83,7 @@
               </div>
 
                 {{-- Recipient lists --}}
+                <div class="recipientId">
                 <div class="input-group rec_type" id="secretary" style="display: none">    
                 <label for="recipient_sec">Recipient</label>
                 <select name="recipient_sec" id="recipient_sec">
@@ -115,9 +116,11 @@
                   </select>
 
                 </div>
+              </div>
                 {{-- End of recipients section --}}
-              <label>Message</label>
-              <textarea rows="5" placeholder="Your Message"></textarea>
+             
+                <label>Message</label>
+              <textarea rows="5" name="text" placeholder="Your Message"></textarea>
 
               <div class="container-b">
                 <input type="file" class="upload-box">

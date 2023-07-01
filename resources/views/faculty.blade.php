@@ -47,7 +47,7 @@
 
     <div  class="container">
         <div class="box">
-            <div class="icon">FAST</div>
+            <div class="icon"></div>
             <div class="content">
                 <h3>FAST</h3>
                 <p>Faculty of Applied Sciencees and Technology</p>
@@ -56,7 +56,7 @@
         </div>
 
         <div class="box">
-            <div class="icon">FAD</div>
+            <div class="icon"></div>
             <div class="content">
                 <h3>FAD</h3>
                 <p>Faculty of Arts and Design</p>
@@ -65,7 +65,7 @@
         </div>
 
         <div class="box">
-            <div class="icon">FOE</div>
+            <div class="icon"></div>
             <div class="content">
                 <h3>FOE</h3>
                 <p>Faulty of Engineering</p>
@@ -75,7 +75,7 @@
         </div>
 
         <div class="box">
-            <div class="icon">FNBE</div>
+            <div class="icon"></div>
             <div class="content">
                 <h3>FNBE</h3>
                 <p>Faculty of Built and Natural Enivronment </p>
@@ -84,7 +84,7 @@
         </div>
 
         <div class="box">
-            <div class="icon">FASS</div>
+            <div class="icon"></div>
             <div class="content">
                 <h3>FASS</h3>
                 <p>Faculty of Applied Soical Sciences</p>
@@ -93,7 +93,7 @@
         </div>
 
         <div class="box">
-            <div class="icon">School of Business</div>
+            <div class="icon"></div>
             <div class="content">
                 <h3>HTU BUS SCH</h3>
                 <p>HTU School of Business</p>

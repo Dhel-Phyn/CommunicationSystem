@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Message;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -25,9 +25,21 @@ class MessageController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(MessageFormRequest $request)
     {
-        //
+    $data = $request ->validated();
+
+    $message = new Message;
+    $message -> username = $data['username'];
+    $message ->senderId = $data['senderId'];
+    $message -> text = $data['text'];
+    $message -> phone= $data['phone'];
+    $message -> email = $data['email'];
+    $message -> recipientId = $data['recipientId'];
+    $message -> created_by = Auth::user()->id;
+    $message -> save();
+
+    return redirect('message')->with('message', 'Message Sent Successfuly');
     }
 
     /**

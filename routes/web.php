@@ -45,3 +45,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function (){
 
 Route::resource("Faculty", FacultyController::class);
 Route::get('/faculty', [App\Http\Controllers\FacultyController::class, 'index'])->name('faculty.index');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
