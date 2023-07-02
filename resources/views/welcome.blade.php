@@ -135,8 +135,8 @@
             </div> --}}
             <div class="welcome">
                 <h1>WELCOME TO HTU DEPARTMENTAL COMMUNICATION SYSTEM</h1>
-                <p>Please Proceed to Login</p>
-                <p>If new, please Register!</p>
+                <p>Login.</p>
+                <p>If new, Register!</p>
             </div>
         </div>
     </body>

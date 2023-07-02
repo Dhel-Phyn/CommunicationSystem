@@ -9,7 +9,7 @@ nav {
   position: relative;
   top: 0;
   bottom: 0;
-  height: 100vh;
+  height: 102vh;
   left: 0;
   background: #6e77ee;
   min-width: 280px;
@@ -31,11 +31,14 @@ nav {
 
 a {
   position: relative;
-  color: rgb(85, 83, 83);
+  color: #fff;
   font-size: 14px;
   display: table;
   width: 288px;
   padding: 10px;
+}
+h4{
+  color: #fff;
 }
 
 nav .fas {

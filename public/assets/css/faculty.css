@@ -28,22 +28,36 @@ body {
 }
 
 .container .box {
-  flex: 1 1 250px;
+  flex: 1 1 260px;
     position: relative;
     padding: 40px;
     background: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    margin: 20px;
+    margin: 12px;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-h3{
-   color: blue;
+.container .box:hover{
+    background: #507cdb 31% 14%;
+}
+
+.sch{
+   color:blue;
+   text-align: center;
+   font-weight: bolder;
 }
 
 p{
-    margin-top: 30px;
-    font-size: 18px;
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+option{
+    padding: 1.5px;
+    font-style: italic;
+    text-justify: auto;
+    word-wrap: inherit;
 }
