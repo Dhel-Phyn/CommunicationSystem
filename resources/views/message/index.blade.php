@@ -54,7 +54,7 @@
         <div class="contact-left">
           <h3>Message</h3>
           {{-- Senders Details --}}
-            <form>
+          <form method="POST" action="{{ route('message.store') }}">
               <div class="input-row">
                 {{-- Name,Phone --}}
                 <div class="input-group">
@@ -99,14 +99,25 @@
 
                 <div class="input-group rec_type" id="student" style="display: none">
                   <label>Recipient</label>
-                  <select name="recipient_stud" id="recipient_stud">
+                  <select name="stud_type" id="stud_type">
+                    <option value="">Select Student</option>
+                    <option value="1">Individual</option>
+                    <option value="2">All Student</option>
+                  </select>
+
+                  <div class="input-group studs std_1" id="ind_stud" style="display: none">
+                    <label for="ind_student">Enter index number(s)</label>
+                    <input type="text" name="ind_student" id="ind_student" placeholder="Enter student's index number">
+                  </div>
+
+                  <select name="recipient_stud" id="recipient_stud" class="studs std_2" style="margin-top: 8px; display: none">
                     <option value="">Select Program</option>
                     <option value="1">HND ICT</option>
                     <option value="2">HND Computer Science</option>
                     <option value="3">BTECH HND ICT</option>
                     <option value="4">BTECH Computer Science</option>
                   </select>
-                  <select name="recipient_studL" id="recipient_studL" style="margin-top: 10px">
+                  <select name="recipient_studL" id="recipient_studL" class="std_2 studs" style="margin-top: 8px; display: none">
                     <option value="">Select the Year</option>
                     <option value="1">Year 1</option>
                     <option value="2">Year 2</option>
@@ -166,7 +177,9 @@
     </div>
 
     <script>
+      
       const recipient_type = document.querySelector("select#recipient_type");
+      const student_type = document.querySelector("select#stud_type");
       recipient_type.addEventListener("change", function(){
 
         const itemGroups = document.querySelectorAll(".input-group.rec_type")
@@ -181,6 +194,24 @@
           }
         }
       })
+
+      // Assuming 'student_type' is a reference to a select element
+      student_type.addEventListener('change', function() {
+        const myval = this.value;
+        const studs = document.querySelectorAll('.studs');
+        
+        studs.forEach(function(element) {
+          element.style.display = 'none';
+        });
+        
+        if(myval !== ""){
+          const selectedStud = document.querySelectorAll('.std_' + myval);
+          selectedStud.forEach(function(element){
+            element.style.display = "block";
+          });
+        }        
+      });
+
     </script>
 </body>
 </html> 

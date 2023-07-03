@@ -1,23 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Message extends Model
 {
-    use HasFactory;
-    protected $table ='message'; 
+    protected $fillable = ['username', 'senderId', 'text', 'phone', 'email', 'recipientId', 'created_by'];
     
-    protected $fillable =[
-        'chatId',
-        'senderId',
-        'recipientId',
-        'text',
-        'username',
-        'phone', 
-        'email',
-        'created_by'
-    ];
+    // Define any relationships or additional functions here
 }
