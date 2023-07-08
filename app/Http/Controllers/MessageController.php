@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Message;
+use App\Models\Message;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
 {
@@ -11,35 +13,39 @@ class MessageController extends Controller
      */
     public function index()
     {
-        return view('message.index');
+        $messages = Message::all();
+        return view('message.index', compact("messages"));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-    return view('message.create');
-    }
+    // public function create()
+    // {
+    // return view('message.create');
+    // }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(MessageFormRequest $request)
+    public function store(Request $request)
     {
-    $data = $request ->validated();
+        $request->validate([
+            "username"=>"required|string|max:100"
+        ]);
+    $message = new Message();
+    $message->username = $request->username;
+    $message->senderId = $request->senderId;
+    $message->text = $request->text;
+    $message->phone= $request->phone;
+    $message->email = $request->email;
+    $message->recipientId = $request->recipientId;
+    $message->senderId =request()->user()->id;
+    $message->created_by =request()->user()->id;
+    $message->save();
 
-    $message = new Message;
-    $message -> username = $data['username'];
-    $message ->senderId = $data['senderId'];
-    $message -> text = $data['text'];
-    $message -> phone= $data['phone'];
-    $message -> email = $data['email'];
-    $message -> recipientId = $data['recipientId'];
-    $message -> created_by = Auth::user()->id;
-    $message -> save();
-
-    return redirect('message')->with('message', 'Message Sent Successfuly');
+    // return redirect('message')->with('message', 'Message Sent Successfuly');
+        return redirect()->back()->with('message', 'Message Sent Successfuly');
     }
 
     /**

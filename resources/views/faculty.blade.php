@@ -48,35 +48,35 @@
     <div  class="container">
         <div class="box">
             <div class="icon"></div>
-            <div class="content">
+            <div class="content" id="fast">
                 <h4 class="sch">FAST</h4>
                 <p>Faculty of Applied Sciencees and Technology</p>
                     <option value="">Computer Science</option>
-                    <option value="">Food Science and Technology</option>
+                    <option value="">Food Science & Technology</option>
                     <option value="">Agro Enterprise Development</option>
-                    <option value="">Mathematics and Statistics</option>
-                    <option value="">Hospitlity and Tourism Management</option>
+                    <option value="">Mathematics & Statistics</option>
+                    <option value="">Hospitlity & Tourism Management</option>
             </div>
         </div>
 
         <div class="box">
             <div class="icon"></div>
-            <div class="content">
+            <div class="content" id="fad">
                 <h4 class="sch">FAD</h4>
-                <p>Faculty of Arts and Design</p>
-                    <option value="">Fashion and Design Textiles</option>
+                <p>Faculty of Arts & Design</p>
+                    <option value="">Fashion & Design Textiles</option>
                     <option value="">Industrial Arts</option>
             </div>
         </div>
 
         <div class="box">
             <div class="icon"></div>
-            <div class="content">
+            <div class="content" id="foe">
                 <h4 class="sch">FOE</h4>
                 <p>Faulty of Engineering</p>
                     <option value="">Agricultural Engineering</option>
                     <option value="">Civil Engineering</option>
-                    <option value="">Electrical and Electronic Engineering</option>
+                    <option value="">Electrical & Electronic Engineering</option>
                     <option value="">Mechanical Engineering</option>
             </div>
 
@@ -84,10 +84,10 @@
 
         <div class="box">
             <div class="icon"></div>
-            <div class="content">
+            <div class="content" id="fn">
                 <h4 class="sch">FNBE</h4>
                 <p>Faculty of Built and Natural Enivronment </p>
-                    <option value="">Architectural and Real Estate Development</option>
+                    <option value="">Architectural & Real Estate Dev.</option>
                     <option value="">Environmental Science</option>
                     <option value="">Building Technology</option>
                   
@@ -96,21 +96,21 @@
 
         <div class="box">
             <div class="icon"></div>
-            <div class="content">
+            <div class="content" id="fass">
                 <h4 class="sch">FASS</h4>
                 <p>Faculty of Applied Soical Sciences</p>
-                    <option value="">Applied Modern Languages and Communication</option>
+                    <option value="">Applied Modern Lang. & Comm.</option>
                     <option value="">Mutidisciplinary Studies</option>
             </div>
         </div>
 
         <div class="box">
             <div class="icon"></div>
-            <div class="content">
+            <div class="content" id="bus">
                 <h4 class="sch">HTU BUS SCH</h4>
                 <p>HTU School of Business</p>
-                    <option value="">Accounting and Finance</option>
-                    <option value="">Logistics and Supply Chain Management</option>
+                    <option value="">Accounting & Finance</option>
+                    <option value="">Logistics & Supply Chain Manag.</option>
                     <option value="">Management Science</option>
                     <option value="">Marketing</option>
                  

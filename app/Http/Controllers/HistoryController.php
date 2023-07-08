@@ -11,7 +11,9 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        return view ('history');
+        // $messages = Message::all();
+
+        return view('history');
     }
 
     /**

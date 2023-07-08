@@ -29,7 +29,7 @@
             <i class="fas fa-calendar-alt"></i>
             <span class="nav-item">Calender</span>
         </a></li>
-        <li><a href="{{route('message.index')}}">
+        <li><a href="{{route('history.index')}}">
             <i class="fas fa-history"></i>
             <span class="nav-item">History</span>
         </a></li>
@@ -54,11 +54,13 @@
         <div class="contact-left">
           <h3>Message</h3>
           {{-- Senders Details --}}
-          <form method="POST" action="{{ route('message.store') }}">
+          <form method="POST" action="{{ route('message.store')}}" enctype="multiple/for-data" >
+            @csrf
+            {{-- <div>{{ $errors->username }}</div> --}}
               <div class="input-row">
                 {{-- Name,Phone --}}
                 <div class="input-group">
-                  <input type="hidden" name="senderId">
+                  {{-- <input type="hidden" name="senderId"> --}}
                   <label for="username">Name</label>
                   <input type="text" name="username" id="username" placeholder="Jane">
                 </div>
@@ -86,14 +88,14 @@
                 <div class="recipientId">
                 <div class="input-group rec_type" id="secretary" style="display: none">    
                 <label for="recipient_sec">Recipient</label>
-                <select name="recipient_sec" id="recipient_sec">
-                  <option value=""> Select Secretary Department </option>
-                  <option value="">Computer Science</option>
-                  <option value="">Food Technology</option>
-                  <option value="">Purchasing and Supply</option>
-                  <option value="">Banking and Finance</option>
-                  <option value="">Fashion and Design</option>
-                  <option value="">Electrical Engineering</option>
+                <select name="recipientId" id="recipientId">
+                  <option value="1"> Select Secretary Department </option>
+                  <option value="2">Computer Science</option>
+                  <option value="3">Food Technology</option>
+                  <option value="4">Purchasing and Supply</option>
+                  <option value="5">Banking and Finance</option>
+                  <option value="6">Fashion and Design</option>
+                  <option value="7">Electrical Engineering</option>
                 </select>
               </div>
 

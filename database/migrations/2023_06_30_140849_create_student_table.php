@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('stdLevel');
             $table->string('stdDept');
             $table->string('stdProgram');
-            $table-> id('deptID');
+            $table-> string('deptID')->nullable();
             $table->timestamps();
         });
     }

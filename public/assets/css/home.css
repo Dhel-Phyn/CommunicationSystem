@@ -26,7 +26,7 @@ body{
   
   .cardBox .card {
     position: relative;
-    background: white;
+    background: #B3E7F2;
     padding: 20px;
     border-radius: 15px;
     display: flex;
@@ -37,8 +37,8 @@ body{
   
   .cardBox .card .name {
     position: relative;
-    font-weight: 5vh;
-    font-size: 2.5rem;
+    font-weight: 3vh;
+    font-size: 2rem;
     color:#6e77ee;
   }
   
@@ -60,12 +60,10 @@ body{
   
   .dailyActive {
     position: relative;
-    /* display: block; */
-    /* width: 40%; */
     min-height: 20px;
     padding: 10px;
-    margin-left: 10vh;
-    color: blue;
+    margin: 5vh 8vh;
+    color: rgb(5, 5, 5);
     box-shadow: 0 7px 25px #494380;
     border-radius: 20px;
     justify-content: space-between;
@@ -110,7 +108,7 @@ body{
   ul:not(nav > ul) li{
     list-style-type: none;
     font-size: 17px;
-    /* padding: 12px 8px 12px 50px; */
+    padding: 8px 5px 8px 12px;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -121,29 +119,18 @@ body{
     position: absolute;
     height: 28px;
     width: 28px;
-    border-radius: 50%;
-    background-image: url('assets/img/uncheck.jpg');
-    background-size: cover;
-    background-position: center;
+    border-radius: 60%;
     top: 12px;
-    left: 8px;
-  }
-
-  ul:not(nav > ul) li.checked{
-    color: blue;
-    text-decoration: line-through;
-  }
-  ul:not(nav > ul) li.checked::before{
-    background-image: url('');
+    left: 5px;
   }
   
   ul:not(nav > ul) li span{
     position: absolute;
-    right: 0;
-    top: 5px;
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
+    right: 2px;
+    top: 0px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
     color: #555;
     line-height: 40px;
     text-align: center;

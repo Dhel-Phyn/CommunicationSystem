@@ -41,23 +41,10 @@ Route::get('/message', [MessageController::class, 'index'])->name('message.index
 Route::get('/message/create', [MessageController::class, 'create'])->name('message.create');
 
 // Store a newly created message
-Route::post('/message', [MessageController::class, 'store'])->name('message.store');
-
-// Display a specific message
-// Route::get('/message/{id}', [MessageController::class, 'show'])->name('message.show');
-
-// Show the form for editing a specific message
-// Route::get('/message/{id}/edit', [MessageController::class, 'edit'])->name('message.edit');
-
-// Update a specific message
-// Route::put('/message/{id}', [MessageController::class, 'update'])->name('message.update');
-
-// Delete a specific message
-// Route::delete('/message/{id}', [MessageController::class, 'destroy'])->name('message.destroy');
-
-Route::post('/message', [MessageController::class, 'store'])->name('message.store')->middleware(MessageFormRequest::class);
+Route::post('/sendmessage', [MessageController::class, 'store'])->name('message.store');
 
 
+Route::get('/message/history', [HistoryController::class, 'index'])->name('message.history');
 
 Route::resource('history', HistoryController::class);
 

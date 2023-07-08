@@ -4,14 +4,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMessagesTable extends Migration
+return new class extends Migration
 {
-    public function up()
+    public function up(): void
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->string('username');
-            $table->integer('senderId');
+            $table->integer('senderId')->nullable();
             $table->text('text');
             $table->string('phone');
             $table->string('email');
@@ -22,9 +22,9 @@ class CreateMessagesTable extends Migration
         });
     }
 
-    public function down()
+    // Reverse migrations
+    public function down():void
     {
         Schema::dropIfExists('messages');
     }
-}
-
+};

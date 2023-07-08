@@ -51,27 +51,27 @@
         <div class="cardBox">
             <div class="card">
               <div>
-                <div class="name">Today</div>
-                <div class="cardname">HOD's meeting with the 300</div>
+                <div class="name">Today' News</div>
+                <div class="cardname"></div>
               </div>
               <div class="iconBx">
-                <ion-icon name="eye-outline"></ion-icon>
+                <i fas fa-eye-outline></i>
               </div>
             </div>
   
             <div class="card">
               <div>
                 <div class="name">2000</div>
-                <div class="cardname">Traineers So Far</div>
+                <div class="cardname">Student</div>
               </div>
               <div class="iconBx">
-                <ion-icon name="person"></ion-icon>
+                
               </div>
             </div>
   
             <div class="card">
               <div>
-                <div class="name">250</div>
+                <div class="name">50</div>
                 <div class="cardname">Events</div>
               </div>
               <div class="iconBx">
@@ -89,6 +89,8 @@
               </div>
             </div>
           </div>
+
+          
 
           <!-- Daily Activities/Todo list -->
           <div class="dailyActive">
