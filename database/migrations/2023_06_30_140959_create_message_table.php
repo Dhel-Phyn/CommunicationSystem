@@ -15,7 +15,7 @@ return new class extends Migration
             $table->text('text');
             $table->string('phone');
             $table->string('email');
-            $table->integer('recipientId');
+            $table->foreignId('recipientId')->constrained("users")->cascadeOnDelete();
             $table->unsignedBigInteger('created_by');
             $table->foreign('created_by')->references('id')->on('users');
             $table->timestamps();

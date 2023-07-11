@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class HistoryController extends Controller
@@ -11,9 +12,9 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        // $messages = Message::all();
+       $messages = Message::where("recipientId", auth()->user()->id)->get();
 
-        return view('history');
+        return view('history', compact("messages"));
     }
 
     /**

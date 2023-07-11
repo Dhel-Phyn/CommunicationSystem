@@ -13,7 +13,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $messages = Message::all();
+        $messages = auth()->user()->sent_messages;
         return view('message.index', compact("messages"));
     }
 

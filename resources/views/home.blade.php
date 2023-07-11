@@ -22,20 +22,20 @@
                     <span class="nav-item">Home</span>
                 </a></li>
                 <li><a href="{{route('faculty.index')}}">
-                    <i class="fas fa-university"></i>
+                   <i class="fas fa-university"></i>
                     <span class="nav-item">Faculty</span>
                 </a></li>
                 <li><a href="{{route('calendar.index')}}">
                     <i class="fas fa-calendar-alt"></i>
                     <span class="nav-item">Calender</span>
                 </a></li>
-                <li><a href="#">
-                    <i class="fas fa-history"></i>
-                    <span class="nav-item">History</span>
-                </a></li>
                 <li><a href="{{route('message.index')}}">
-                    <i class="fas fa-envelope"></i>
-                    <span class="nav-item">Message</span>
+                  <i class="fas fa-envelope"></i>
+                  <span class="nav-item">Message</span>
+              </a></li>
+              <li><a href="{{route('history.index')}}">
+                    <i class="fas fa-history"></i>
+                    <span class="nav-item">Message Received</span>
                 </a></li>
                 <li><a href="{{route('logout') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">

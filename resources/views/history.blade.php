@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatSystem</title>
+    <title>Communicatin System</title>
     <link href="{{url('assets/css/home.css')}}" rel="stylesheet">
     <link href="{{url('assets/css/nav.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
@@ -29,13 +29,13 @@
                     <i class="fas fa-calendar-alt"></i>
                     <span class="nav-item">Calender</span>
                 </a></li>
-                <li class="active"><a href="{{route('history.index')}}">
-                    <i class="fas fa-history"></i>
-                    <span class="nav-item">History</span>
-                </a></li>
                 <li><a href="{{route('message.index')}}">
                     <i class="fas fa-envelope"></i>
                     <span class="nav-item">Message</span>
+                </a></li>
+                <li class="active"><a href="{{route('history.index')}}">
+                    <i class="fas fa-history"></i>
+                    <span class="nav-item">Message Received</span>
                 </a></li>
                 <li><a href="{{route('logout') }}" onclick="event.preventDefault();
                   document.getElementById('logout-form').submit();">
@@ -47,7 +47,33 @@
             </ul>
         </nav>
 
-        
+        <div>
+            <table class="table table-stripped table-responsive">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Message</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach($messages as $message)
+                <tr>
+                    <td>
+                        {{$message->username}}
+                    </td>
+                    <td>
+                        {{$message->text}}
+                    </td>
+                    <td>
+                        {{$message->email}}
+                    </td>
+                    </tr>
+                @endforeach
+                    
+                </tbody>
+            </table>
+        </div>
         
 </body>
 </html>

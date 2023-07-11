@@ -27,13 +27,13 @@
                     <i class="fas fa-calendar-alt"></i>
                     <span class="nav-item">Calender</span>
                 </a></li>
-                <li><a href="{{route('history.index')}}">
-                    <i class="fas fa-history"></i>
-                    <span class="nav-item">History</span>
-                </a></li>
-                <li><a href="{{ route('message.index') }}">
+                <li><a href="{{route('message.index')}}">
                     <i class="fas fa-envelope"></i>
                     <span class="nav-item">Message</span>
+                </a></li>
+                <li><a href="{{route('history.index')}}">
+                    <i class="fas fa-history"></i>
+                    <span class="nav-item">Message Received</span>
                 </a></li>
                 <li><a href="{{route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">

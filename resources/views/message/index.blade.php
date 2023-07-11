@@ -29,13 +29,13 @@
             <i class="fas fa-calendar-alt"></i>
             <span class="nav-item">Calender</span>
         </a></li>
+        <li class="active"><a href="{{route('message.index')}}">
+          <i class="fas fa-envelope"></i>
+          <span class="nav-item">Message</span>
+      </a></li>
         <li><a href="{{route('history.index')}}">
             <i class="fas fa-history"></i>
-            <span class="nav-item">History</span>
-        </a></li>
-        <li class="active"><a href="{{route('message.index')}}">
-            <i class="fas fa-envelope"></i>
-            <span class="nav-item">Message</span>
+            <span class="nav-item">Message Received</span>
         </a></li>
         <li><a href="{{route('logout') }}" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();">
@@ -148,30 +148,16 @@
         <div class="contact-right">
           <h3>Recent Message</h3>
           <div class="messageContainer">
+            @foreach($messages as $message)
             <div class="messageCard">
-              <div class="head">
-                <span class="from">FAST</span> - <span class="to">Year 1</span>
-              </div>
               <div class="message"> 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In assumenda quasi perspiciatis porro nisi, tempore, numquam sit odit vel dolore mollitia, recusandae ullam architecto?</p>
+                <p>{{ $message->text }}</p>
               </div>
+                <div class="head">
+                  <span class="from">Create at: </span>: <span class="to">{{$message->created_at}}</span>
+                </div>
             </div>
-            <div class="messageCard">
-              <div class="head">
-                <span class="from">FAST</span> - <span class="to">Year 1</span>
-              </div>
-              <div class="message"> 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In assumenda quasi perspiciatis porro nisi, tempore, numquam sit odit vel dolore mollitia, recusandae ullam architecto?</p>
-              </div>
-            </div>
-            <div class="messageCard">
-              <div class="head">
-                <span class="from">FAST</span> - <span class="to">Year 1</span>
-              </div>
-              <div class="message"> 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In assumenda quasi perspiciatis porro nisi, tempore, numquam sit odit vel dolore mollitia, recusandae ullam architecto?</p>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
         
